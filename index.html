@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSca_kh3Cxaxkdjkq3WM3GIvQAl4_oQYVuBvj_QUXLpGhcWiMA/formResponse"
+    method="POST"
+    target="hidden_iframe"
+    onsubmit="submitted()">
+
+        <label>Block Number</label>
+        <input type="text" name="entry.2007335112" required>
+
+        <label>Name</label>
+        <input type="text" name="entry.287618785" required>
+
+        <label>Task 1</label>
+        <input type="text" name="entry.762728464" required>
+
+        <label>Task 2</label>
+        <input type="text" name="entry.1584748767">
+
+        <label>Task 3</label>
+        <input type="text" name="entry.1429342110">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <p id="msg" style="display:none;color:green;">
+    ✅ Response Submitted!
+    </p>
+
+<script>
+function submitted(){
+ const msg = document.getElementById("msg");
+    msg.style.display = "block";
+
+    setTimeout(function(){
+        msg.style.display = "none";
+    }, 2000);
+}
+</script>
+</body>
+</html>
+
